@@ -36,6 +36,7 @@ exec --no-startup-id nm-applet
 
 exec --no-startup-id "/opt/glance/glance --config /home/ayush/.config/glance/glance.yml"
 exec --no-startup-id "/usr/bin/picom --config ~/.config/picom/picom.conf"
+exec --no-startup-id dunst
 
 # Stuffs i did
 

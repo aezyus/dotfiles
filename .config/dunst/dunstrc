@@ -1,0 +1,8 @@
+[global]
+monitor = 0
+origin = top-right
+offset = 10x10
+
+font = Iosevka 11
+markup = yes
+ellipsize = middle
