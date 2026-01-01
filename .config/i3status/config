@@ -1,0 +1,30 @@
+general {
+    output_format = "i3bar"
+    colors = true
+    interval = 5
+}
+
+order += "tztime mumbai"
+order += "disk /"
+order += "memory"
+order += "battery 0"
+
+disk "/" {
+    format = "Rule34 hehe: %avail"
+}
+
+battery 0 {
+	format = "%status %percentage %remaining %emptytime"
+        format_down = "No battery"
+        status_chr = "⚡ CHR"
+        status_bat = " BAT"
+        status_unk = "? UNK"
+        status_full = "☻ FULL"
+        path = "/sys/class/power_supply/BAT1/uevent"
+        low_threshold = 10
+}
+
+tztime mumbai {
+       format = "%Y-%m-%d %H:%M %Z"
+       timezone = "India/Kolkata"
+}
