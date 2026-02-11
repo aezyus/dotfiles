@@ -36,9 +36,22 @@ exec --no-startup-id nm-applet
 
 exec --no-startup-id "/opt/glance/glance --config /home/ayush/.config/glance/glance.yml"
 exec --no-startup-id "/usr/bin/picom --config ~/.config/picom/picom.conf"
+
+exec --no-startup-id /usr/bin/gentoo-pipewire-launcher
+
 exec --no-startup-id dunst
 
-# Stuffs i did
+# Stuffs i did - #custom
+# Full screen
+bindsym Print exec --no-startup-id maim ~/Media/Screenshots/arara_$(date +%s).png
+
+# Select region
+bindsym Shift+Print exec --no-startup-id maim -s ~/Media/Screenshots/arara_$(date +%s).png
+
+# Region → clipboard
+bindsym Ctrl+Shift+Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
+
+
 
 # focus_follows_mouse no
 mouse_warping none
@@ -61,12 +74,14 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # applications bind-keys
-bindsym $mod+T exec qterminal
+bindsym $mod+T exec kitty
 bindsym $mod+grave exec qterminal -d
 bindsym $mod+q kill
 bindsym $mod+d exec rofi -show drun
+bindsym $mod+period exec rofi -modi emoji -show emoji
 bindsym $mod+z exec emacs
 bindsym $mod+w exec firefox-bin
+bindsym $mod+v exec clipmenu
 
 # change focus
 bindsym $mod+h focus left
@@ -96,7 +111,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+b split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+# bindsym $mod+l split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
