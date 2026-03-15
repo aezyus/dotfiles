@@ -48,3 +48,6 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias bashrc='source ${HOME}/.bashrc'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# Created by `pipx` on 2026-02-12 04:33:43
+export PATH="$PATH:/home/ayush/.local/bin"
